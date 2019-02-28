@@ -19,7 +19,7 @@ def prompt_user
 end
 
 def get_user_input
-  gets "user input"
+  gets.chomp
   # code #get_user_input here
 end
 
@@ -29,14 +29,28 @@ def end_game
 end
 
 def initial_round
+  first_round = deal_card + deal_card
+  display_card_total(first round)
+  return first_round
   # code #initial_round here
 end
 
 def hit?
+  prompt_user
+ user_input = get_user_input
+ if user_input == "h"
+   card_total += deal_card
+ elsif user_input == "s"
+   card_total
+ else
+   invalid_command
+ end
+ card_total
   # code hit? here
 end
 
 def invalid_command
+  puts "Please enter a valid command"
   # code invalid_command here
 end
 

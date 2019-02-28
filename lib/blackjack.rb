@@ -14,14 +14,17 @@ def display_card_total
 end
 
 def prompt_user
+  puts "Type "h" to hit or "s" to stay"
   # code #prompt_user here
 end
 
 def get_user_input
+  gets "user input"
   # code #get_user_input here
 end
 
 def end_game
+  puts "Sorry, you hit #{card_total}. Thanks for playing"
   # code #end_game here
 end
 
